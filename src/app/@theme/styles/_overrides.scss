@@ -1,0 +1,47 @@
+@import 'themes';
+@import "bootstrap_variables";
+
+@mixin nb-overrides() {
+  nb-select.size-medium button {
+    padding: 0.4375rem 2.2rem 0.4375rem 1.125rem !important;
+
+    nb-icon {
+      right: 0.41rem !important;
+    }
+  }
+
+  nb-select.form-control {
+   padding: 0 !important;
+    border: none;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 1rem !important;
+}
+
+ul li::before {
+  content: "\2022";
+  color: nb-theme(color-primary-500);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.yearButton {
+  border-radius: 0.3rem;
+  cursor: pointer;
+  background-color: $success-light ;
+  &:hover {
+    background-color: $success;
+  }
+  &.active {
+    background-color: $success;
+  }
+}
+

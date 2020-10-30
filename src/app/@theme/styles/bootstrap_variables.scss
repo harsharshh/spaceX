@@ -1,0 +1,11 @@
+@import "themes";
+
+$primary: (nb-theme(color-primary-500));
+$primary-light: (nb-theme(color-primary-100));
+$secondary: (nb-theme(color-info-500));
+$success: (nb-theme(color-success-500));
+$success-light: (nb-theme(color-success-200));
+$danger: (nb-theme(color-danger-500));
+$light: #ebebeb;
+$info: (nb-theme(color-warning-500));
+$white:    #ffffff !default;
