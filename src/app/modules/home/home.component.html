@@ -1,11 +1,11 @@
 <section class="container-fluid ">
   <div class="row p-0">
     <div class="col-12">
-      <h1>spaceX launch programs</h1>
+      <h1>SpaceX Launch Programs</h1>
     </div>
   </div>
   <div class="row mt-5">
-    <div class="col-xl-2  col-sm-4 col-12">
+    <div class="col-xl-2   col-sm-4 col-12">
       <nb-card class="border-0">
         <nb-card-header class="border-bottom-0">
           <div class="float-left">
@@ -24,7 +24,7 @@
             <div class="col-12">
               <div class="row">
                 <div class="col-6" *ngFor="let year of years">
-                  <div class="m-1 p-2  d-flex justify-content-center align-items-center yearButton"
+                  <div class="m-1 my-2 p-2   d-flex justify-content-center align-items-center yearButton"
                        [ngClass]="activeYear == year ? 'active' :null"
                        (click)="setActiveYear(year , filters.launch_year)">
                     <div class="align-self-center">
@@ -43,7 +43,7 @@
             <div class="col-12">
               <div class="row">
                 <div class="col-6" *ngFor="let launch of successFulLaunch">
-                  <div class="m-1 p-2  d-flex justify-content-center align-items-center yearButton"
+                  <div class="m-1 my-2 p-2  d-flex justify-content-center align-items-center yearButton"
                        [ngClass]="launchFlag == launch.value ? 'active' :null"
                        (click)="setLaunchFlag(launch.value, filters.launch_success)">
                     <div class="align-self-center">
@@ -62,7 +62,7 @@
             <div class="col-12">
               <div class="row">
                 <div class="col-6" *ngFor="let land of successFulLaunch">
-                  <div class="m-1 p-2  d-flex justify-content-center align-items-center yearButton"
+                  <div class="m-1 my-2 p-2  d-flex justify-content-center align-items-center yearButton"
                        [ngClass]="landFlag == land.value ? 'active' :null"
                        (click)="setLandFlag(land.value, filters.land_success)">
                     <div class="align-self-center">
@@ -76,10 +76,10 @@
         </nb-card-body>
       </nb-card>
     </div>
-    <div class="col-xl-10  col-sm-8 col-12">
+    <div class="col-xl-10   col-sm-8 col-12">
       <div class="row" *ngIf="spaceXdata?.length >0; else noDataFound">
         <div class="col-xl-3 col-sm-6 col-12" *ngFor="let data of spaceXdata">
-          <nb-card class="bg-white" size="medium">
+          <nb-card class="bg-white" >
             <nb-card-header class="border-bottom-0">
               <img loading="lazy"
                 [alt]="data?.mission_name"
@@ -87,25 +87,25 @@
                    class="w-100 bg-light">
             </nb-card-header>
             <nb-card-body>
-              <div class="row">
+              <div class="row" style="height: 15rem ;max-height: 17rem;">
                 <div class="col-12">
                   <div class="text-primary font-weight-bold">{{data?.mission_name}} #{{data?.flight_number}}</div>
                 </div>
-                <div class="col-12 mt-2">
+                <div class="col-12 ">
                   <div class="text-dark font-weight-bold">Mission Ids:</div>
                   <ul class="mt-1">
                     <li class="text-primary" *ngFor="let id of data?.mission_id">{{id}}</li>
                   </ul>
                 </div>
-                <div class="col-12 mt-2">
+                <div class="col-12 ">
                   <div class="text-dark font-weight-bold">Launch year:&nbsp;<span
                     class="font-weight-normal text-primary">{{data?.launch_year}}</span></div>
                 </div>
-                <div class="col-12 mt-2">
+                <div class="col-12 ">
                   <div class="text-dark font-weight-bold">Successful launch:&nbsp;<span
                     class="font-weight-normal text-primary">{{data?.launch_success}}</span></div>
                 </div>
-                <div class="col-12 d-flex mt-2">
+                <div class="col-12 d-flex ">
                   <div class="text-dark font-weight-bold">Successful Landing:&nbsp;</div>
                   <div class="text-primary font-weight-normal ">{{data?.launch_landing}}</div>
                 </div>
